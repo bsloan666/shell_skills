@@ -1,7 +1,7 @@
 Shell Skills
 ============
 
-1. Write a script to copy all of the files in data/folder to a new directory
+1. Write a python script to copy all of the files in data/folder to a new directory
    called data/newfolder. The files must have the same content but their names
    must be capitalized so that:
 
@@ -11,4 +11,9 @@ Shell Skills
 
         data/folder/PIFFLE.foo
 
-        
+2. Write a single-line shell command to save a file called data/names.txt that
+   contains a two column list of the first and last names of the employees in
+   the employees datbase file data/employees.csv
+
+3. Write a single-line shell command to print all lines of the following webpage
+   that contain the word "bear" with any combination of upper and lowercase letters.
