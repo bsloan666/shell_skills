@@ -29,3 +29,5 @@ To clone this repository from the command line:
    https://www.stlzoo.org/animals/abouttheanimals/mammals/listallmammals
 
    ...that contain the word "bear" with any combination of upper and lowercase letters.
+
+4. Write a Gnu Makefile for building the project whose source code lives in src  

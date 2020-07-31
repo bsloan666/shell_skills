@@ -44,7 +44,7 @@ $(LIBOBJS) : %.o : %.cpp
 
 # remove all compiled objects and executables
 clean:
-	rm -fv $(EXE) $(SRCDIR)/*.o
+	rm -fv $(EXE) $(SRCDIR)/*.o $(LIB)
 
 # run the executable
 test:	
