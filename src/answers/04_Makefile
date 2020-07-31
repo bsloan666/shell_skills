@@ -1,0 +1,51 @@
+# GMake Makefile
+# invoke at the project root with:
+#   make -f src/answers/04_Makefile
+# then you may run the program using:
+#   make -f src/answers/04_Makefile test
+# ...or run the executable directly using:
+#   src/test_api_app
+
+#   Gnumake makefiles define some variables, dependencies and rules. 
+#   They are not scripts in the sense of commands being run in a sequence.
+#   Rather, based on the modification times of files referenced, the rules to
+#   rebuild only the parts of the project affected by the change.
+#  
+#   For example, if after you build the project using: 
+#       make -f src/answers/04_Makefile
+#   ...then you make a small edit to one of the impl files ie src/fibonacci_imple.cpp,
+#   and re-run:
+#       make -f src/answers/04_Makefile
+#   ...you will notice that only the parts of the project that needed rebuilding
+#   are run, eg. randomlist_impl.cpp is not recompiled. 
+
+# variables 
+SRCDIR = src
+LIBOBJS = $(SRCDIR)/fibonacci_impl.o $(SRCDIR)/randomlist_impl.o 
+CXX = g++
+LINK = ar
+EXE = $(SRCDIR)/test_api_app
+LIB = $(SRCDIR)/impl.a
+
+# rules
+all: $(EXE)
+
+# compile main.cpp and link against the api library
+$(EXE) : $(LIB) $(SRCDIR)/main.cpp
+	$(CXX) -I $(SRCDIR) $(LIB) $(SRCDIR)/main.cpp -o $(EXE) 
+
+# create a static library of the implementation object files
+$(LIB) : $(LIBOBJS)
+	$(LINK) rcs $@ $(LIBOBJS) 
+
+# compile the implementation cpp files to object files
+$(LIBOBJS) : %.o : %.cpp
+	$(CXX) -I $(SRCDIR) -c $< -o $@ 
+
+# remove all compiled objects and executables
+clean:
+	rm -fv $(EXE) $(SRCDIR)/*.o
+
+# run the executable
+test:	
+	$(EXE)
