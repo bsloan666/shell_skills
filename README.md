@@ -1,6 +1,12 @@
 Shell Skills
 ============
 
+To clone this repository from the command line:
+
+    git clone https://github.com/bsloan666/shell_skills.git
+    (You'll need to enter your github username and password) 
+    
+    
 1. Write a python script to copy all of the files in data/folder to a new directory
    called data/newfolder. The files must have the same content but their names
    must be capitalized so that:
