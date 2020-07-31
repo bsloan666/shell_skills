@@ -1,6 +1,9 @@
 Shell Skills
 ============
 
+A set of challenging and not-so-challenging unix command line tasks
+-------------------------------------------------------------------
+
 To clone this repository from the command line:
 
     git clone https://github.com/bsloan666/shell_skills.git
@@ -21,5 +24,8 @@ To clone this repository from the command line:
    contains a two column list of the first and last names of the employees in
    the employees datbase file data/employees.csv
 
-3. Write a single-line shell command to print all lines of the following webpage
-   that contain the word "bear" with any combination of upper and lowercase letters.
+3. Write a single-line shell command to print all lines of the following webpage:
+
+   https://www.stlzoo.org/animals/abouttheanimals/mammals/listallmammals
+
+   ...that contain the word "bear" with any combination of upper and lowercase letters.
